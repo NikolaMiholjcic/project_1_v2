@@ -1,0 +1,7 @@
+@use "../styles/colors";
+.block {
+  color: colors.$gray_dark;
+  &.active {
+    color: colors.$blue;
+  }
+}

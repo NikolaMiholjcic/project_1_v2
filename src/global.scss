@@ -1,0 +1,100 @@
+:root {
+  --color-white: #ffffff;
+  --color-placeholder-gray: #6d7587;
+  --color-upload-gray: #8596ab;
+  --color-bg-gray: #f4f5fc;
+  --color-notification-green: #20c46d;
+  --color-notification-red: #ec3535;
+  --color-button-green: #4fac68;
+  --color-button-red: #df4149;
+  --color-button-green-hover: #479c5e;
+  --color-highlight-blue: #5561b3;
+  --color-blue-dark: #161f5e;
+  --color-table-gray: #3a416f;
+  --color-table-blue: #3a416f;
+  --color-black: #222631;
+  --line-height-18-size: 1.125rem;
+  --line-height-19-size: 1.192rem;
+  --line-height-21-size: 1.313rem;
+  --line-height-22-size: 1.362rem;
+  --line-height-23-size: 1.406rem;
+  --line-height-24-size: 1.5rem;
+  --line-height-30-size: 1.873rem;
+  --line-height-35-size: 2.23rem;
+  --input-border-radius: 15px;
+  --button-border-radius-smaller: 10px;
+  --button-border-radius: 15px;
+  --section-border-radius: 20px;
+  --image-border-radius: 10px;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin-bottom: 0;
+}
+.light {
+  font-weight: 400;
+}
+.normal {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 600;
+}
+.bolder {
+  font-weight: 700;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.row {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.poppins {
+  font-family: "Poppins", "sans-serif";
+}
+.sans {
+  font-family: "Open Sans", "sans-serif";
+}
+html {
+  font-family: "Poppins", "sans-serif";
+  @media (min-width: 320px) {
+    font-size: 11.5px;
+  }
+  @media (min-width: 375px) {
+    font-size: 12px;
+  }
+  @media (min-width: 425px) {
+    font-size: 12.5px;
+  }
+  @media (min-width: 768px) {
+    font-size: 13px;
+  }
+  @media (min-width: 991px) {
+    font-size: 13.5px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1288px) {
+    font-size: 14.5px;
+  }
+  @media (min-width: 1448px) {
+    font-size: 15px;
+  }
+  @media (min-width: 1668px) {
+    font-size: 15.5px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 16px;
+  }
+}
