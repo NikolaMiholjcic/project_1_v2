@@ -1,0 +1,32 @@
+.button {
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-24-size);
+  font-weight: 600;
+}
+.green {
+  background-color: var(--color-button-green);
+  &:hover {
+    background-color: var(--color-button-green-hover);
+  }
+  color: var(--color-white);
+}
+.gray {
+  background-color: var(--color-bg-gray);
+}
+.full {
+  width: 100%;
+}
+
+.long {
+  width: 136px;
+}
+.short {
+  width: 70px;
+}
+.normal {
+  height: 40px;
+}
+
+.large {
+  height: 46px;
+}

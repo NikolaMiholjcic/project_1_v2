@@ -1,10 +1,16 @@
-import logo from "./logo.svg";
 import styles from "./App.module.scss";
-import Test from "./components/testC/testc";
+import Login from "./components/Login";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
+
 function App() {
   return (
     <div className={styles.App}>
-      <Test />
+      <Login />
     </div>
   );
 }
