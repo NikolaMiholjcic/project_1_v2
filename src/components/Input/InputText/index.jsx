@@ -3,6 +3,7 @@ import TooltipArrow from "../../../assets/svgs/TooltipArrow";
 
 export default function InputText({
   type = "text",
+  isPassword = false,
   placeholder = "",
   readOnly = false,
   onChange = () => {},
@@ -10,8 +11,13 @@ export default function InputText({
   invalid = false,
   errorMessasge = "",
   onFocus = () => {},
+  value = "",
   varName = "",
 }) {
+  if (isPassword) {
+    value = "*".repeat(value.length);
+  }
+
   return (
     <div className="d-flex flex-column container position-relative">
       {label !== "" && <span className={styles.label}>{label}</span>}
@@ -20,6 +26,7 @@ export default function InputText({
           placeholder={`${placeholder}`}
           type="text"
           readOnly={readOnly}
+          value={value}
           className={`${styles.inputText} ${styles.text} ${
             invalid ? styles.invalid : ""
           }`}
@@ -40,6 +47,7 @@ export default function InputText({
           }}
           placeholder={`${placeholder}`}
           readOnly={readOnly}
+          value={value}
           className={`${styles.inputText} ${styles.textArea}`}
         />
       )}

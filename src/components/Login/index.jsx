@@ -9,9 +9,9 @@ import { useNavigate } from "react-router";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [isInvalidInput, setIsInvalidInput] = useState({
-    passowrd: false,
-    username: false,
+  const [isValidInput, setIsValidInput] = useState({
+    password: true,
+    username: true,
   });
   const [form, setForm] = useState({
     username: "",
@@ -20,11 +20,12 @@ export default function Login() {
   });
   function formSubmitHandler(event) {
     event.preventDefault();
-    navigate("/dashboard");
+    console.log(isValidInput.password, "+", isValidInput.username);
+    if (isValidInput.password && isValidInput.username) navigate("/dashboard");
   }
   function onFocusHandler(element) {
-    setIsInvalidInput((oldState) => {
-      return { ...oldState, [element]: false };
+    setIsValidInput((oldState) => {
+      return { ...oldState, [element]: true };
     });
   }
   function onChangeHandler(event, element) {
@@ -61,18 +62,22 @@ export default function Login() {
         <Row>
           <InputText
             placeholder="Username"
-            invalid={isInvalidInput.username}
+            invalid={!isValidInput.username}
             onFocus={onFocusHandler}
             varName="username"
             onChange={onChangeHandler}
+            value={form.username}
           ></InputText>
         </Row>
         <Row>
           <InputText
             placeholder="Password"
-            invalid={isInvalidInput.password}
+            invalid={!isValidInput.password}
+            isPassword
+            onFocus={onFocusHandler}
             varName="password"
             onChange={onChangeHandler}
+            value={form.password}
           ></InputText>
         </Row>
         <Row>

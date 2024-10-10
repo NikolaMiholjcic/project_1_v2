@@ -1,5 +1,4 @@
-import React from "react";
-import "./ArrowUpAndDown.css";
+import styles from "./ArrowUpAndDown.module.css";
 
 const ArrowUpAndDown = () => {
   return (
@@ -9,7 +8,7 @@ const ArrowUpAndDown = () => {
       viewBox="0 0 15 10"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="arrow_up_and_down"
+      className={styles.arrowUpAndDown}
     >
       <path
         d="M5.65738 5.08621L4.24316 3.672L0.000523448 7.91464L1.41474 9.32885L5.65738 5.08621Z"

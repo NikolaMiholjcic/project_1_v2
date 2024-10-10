@@ -1,5 +1,4 @@
-import React from "react";
-import "./Trash.css";
+import styles from "./Trash.module.scss";
 
 const Trash = () => {
   return (
@@ -9,7 +8,7 @@ const Trash = () => {
       viewBox="0 0 18 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="trash"
+      className={styles.trash}
     >
       <path
         d="M5.52539 7.71091H6.90939V18.7839H5.52539V7.71091Z"

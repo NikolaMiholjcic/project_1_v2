@@ -1,5 +1,5 @@
-import "./Headphones.css";
-import React from "react";
+import styles from "./Headphones.module.css";
+
 const Headphones = () => {
   return (
     <svg
@@ -7,7 +7,7 @@ const Headphones = () => {
       height="26"
       viewBox="0 0 22 26"
       fill="none"
-      className="headphones"
+      className={styles.headphones}
     >
       <path
         d="M4.5549 17.563H3.2769C2.88531 17.5237 2.52196 17.3414 2.2563 17.051C1.99065 16.7606 1.84134 16.3825 1.83691 15.989L1.84691 10.173C1.94247 7.69579 2.99867 5.35309 4.79175 3.6412C6.58483 1.92932 8.97394 0.982742 11.4529 1.002"

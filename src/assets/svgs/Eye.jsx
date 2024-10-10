@@ -1,5 +1,4 @@
-import React from "react";
-import "./Eye.css";
+import styles from "./Eye.module.css";
 
 const Eye = () => {
   return (
@@ -9,7 +8,7 @@ const Eye = () => {
       viewBox="0 0 21 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="eye"
+      className={styles.eye}
     >
       <path
         fillRule="evenodd"

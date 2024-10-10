@@ -1,5 +1,4 @@
-import React from "react";
-import "./Arrow.css";
+import styles from "./Arrow.module.css";
 const ArrowDownIcon = ({ size = 14, strokeWidth = 3, className }) => {
   return (
     <svg
@@ -11,7 +10,7 @@ const ArrowDownIcon = ({ size = 14, strokeWidth = 3, className }) => {
       viewBox="0 0 256 256"
       xmlSpace="preserve"
       fill="none"
-      className={`${className} arrow`}
+      className={`${className} ${styles.arrow}`}
     >
       <defs></defs>
       <g

@@ -1,6 +1,5 @@
-import React from "react";
-import "./Block.css";
-const BlocksIcon = ({ size = 24, className }) => {
+import styles from "./Block.module.css";
+const BlocksIcon = ({ size = 24, active = false }) => {
   return (
     <svg
       width={size}
@@ -8,7 +7,7 @@ const BlocksIcon = ({ size = 24, className }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`block ${className}`}
+      className={`${styles.blocksIcon} ${active ? styles.active : ""}`}
     >
       <path
         fillRule="evenodd"

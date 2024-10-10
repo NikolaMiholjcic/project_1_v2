@@ -1,5 +1,4 @@
-import React from "react";
-import "./Magnifying.css";
+import styles from "./Magnifying.module.css";
 
 const Magnifying = () => {
   return (
@@ -9,7 +8,7 @@ const Magnifying = () => {
       viewBox="0 0 22 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="magnifying"
+      className={styles.magnifying}
     >
       <path
         fillRule="evenodd"

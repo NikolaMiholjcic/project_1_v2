@@ -1,5 +1,4 @@
-import React from "react";
-import "./VerticalLine.css";
+import styles from "./VerticalLine.module.css";
 
 const VerticalLine = () => {
   return (
@@ -8,7 +7,7 @@ const VerticalLine = () => {
       height="31"
       viewBox="0 0 1 31"
       fill="none"
-      className="vertical_line"
+      className={styles.verticalLine}
     >
       <path
         d="M0.5 0.5V30.5"

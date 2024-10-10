@@ -1,6 +1,5 @@
-import React from "react";
-import "./Lock.css";
-export default function Lock({ active }) {
+import styles from "./Lock.module.css";
+export default function Lock({ active = false }) {
   return (
     <svg
       width="19"
@@ -8,7 +7,7 @@ export default function Lock({ active }) {
       viewBox="0 0 19 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`lock ${active ? "active" : " "}`}
+      className={`${styles.lock} ${active ? styles.active : " "}`}
     >
       <path
         fillRule="evenodd"

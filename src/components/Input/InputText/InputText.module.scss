@@ -10,9 +10,9 @@
 .inputText {
   line-height: var(--line-height-24);
   font-size: var(--font-size-16);
+  color: var(--color-blue-dark);
   font-weight: 400;
-  color: var(--color-placeholder-gray);
-  background-color: var(--color-bg-gray);
+  background-color: var(--color-black);
   border: none;
   width: 100%;
   display: flex;
@@ -20,6 +20,9 @@
   &:focus {
     border: none;
     outline: 1px solid var(--color-placeholder-gray);
+  }
+  &::placeholder {
+    color: var(--color-placeholder-gray);
   }
 }
 .text {

@@ -1,6 +1,5 @@
-import React from "react";
-import "./Info.css";
-export default function Info({ active }) {
+import styles from "./Info.module.css";
+export default function Info({ active = false }) {
   return (
     <svg
       width="24"
@@ -8,7 +7,7 @@ export default function Info({ active }) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`info ${active ? "active" : ""}`}
+      className={`${styles.info} ${active ? styles.active : ""}`}
     >
       <path
         d="M11.6832 8.822C11.33 8.822 10.9847 8.71725 10.691 8.521C10.3973 8.32476 10.1683 8.04582 10.0332 7.71947C9.89799 7.39312 9.86262 7.03402 9.93153 6.68757C10.0004 6.34112 10.1705 6.02288 10.4203 5.77311C10.6701 5.52333 10.9883 5.35323 11.3348 5.28432C11.6812 5.2154 12.0403 5.25077 12.3667 5.38595C12.693 5.52113 12.972 5.75005 13.1682 6.04375C13.3645 6.33746 13.4692 6.68276 13.4692 7.036C13.4692 7.50968 13.2811 7.96395 12.9461 8.29889C12.6112 8.63383 12.1569 8.822 11.6832 8.822Z"
