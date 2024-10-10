@@ -5,12 +5,18 @@ export default function Button({
   width = "full",
   height = "normal",
   children,
+  label = "",
+  onClick = () => {},
 }) {
   return (
-    <button
-      className={`btn ${styles.button} ${styles[color]} ${styles[width]} ${styles[height]} bold`}
-    >
-      {children}
-    </button>
+    <div className="d-flex flex-column container">
+      {label !== "" && <span className={styles.label}>{label}</span>}
+      <button
+        className={`btn ${styles.button} ${styles[color]} ${styles[width]} ${styles[height]} bold`}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    </div>
   );
 }

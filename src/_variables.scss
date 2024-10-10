@@ -1,6 +1,4 @@
 @mixin card {
-  width: 100%;
-  min-height: 50px;
   background-color: var(--color-bg-gray);
   border-radius: var(--input-border-radius);
 }

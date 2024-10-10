@@ -1,0 +1,68 @@
+@import "/src/variables";
+
+.label {
+  line-height: var(--line-height-24);
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  color: var(--color-placeholder-gray);
+  padding-bottom: 7px;
+}
+.inputText {
+  line-height: var(--line-height-24);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  color: var(--color-placeholder-gray);
+  background-color: var(--color-bg-gray);
+  border: none;
+  width: 100%;
+  display: flex;
+
+  &:focus {
+    border: none;
+    outline: 1px solid var(--color-placeholder-gray);
+  }
+}
+.text {
+  @include card-input;
+}
+
+.textArea {
+  @include card-input-area;
+  height: 120px;
+}
+.large {
+  height: 990px;
+}
+.invalid {
+  outline: 1px solid var(--color-button-red);
+}
+.errorMessage {
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  padding: 0 16px;
+  border-radius: var(--border-radius-10);
+  background-color: var(--color-blue-dark);
+  font-size: var(--font-size-12);
+  color: var(--color-white);
+  line-height: var(--line-height--18);
+  height: 32px;
+  > :nth-child(1) {
+    position: absolute;
+    left: -10px;
+    color: var(--color-blue-dark);
+  }
+}
+
+.errorX {
+  position: absolute;
+  color: var(--color-button-red);
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-weight: 500;
+  font-size: var(--font-size-20);
+  line-height: var(--line-height-30);
+}

@@ -13,7 +13,10 @@
   --color-table-gray: #3a416f;
   --color-table-blue: #3a416f;
   --color-black: #222631;
+  --font-size-12: 0.75rem;
   --font-size-16: 1rem;
+  --font-size-20: 1.25rem;
+  --font-size-22: 1.375;
   --font-size-32: 2rem;
   --line-height-18: 1.125rem;
   --line-height-19: 1.192rem;
@@ -23,6 +26,10 @@
   --line-height-24: 1.5rem;
   --line-height-30: 1.873rem;
   --line-height-35: 2.23rem;
+  --border-radius-10: 10px;
+  --border-radius-15: 15px;
+  --border-radius-20: 20px;
+  --border-radius-25: 25px;
   --input-border-radius: 15px;
   --button-border-radius-smaller: 10px;
   --button-border-radius: 15px;
@@ -47,8 +54,18 @@ p {
   padding-right: 0 !important;
 }
 .row {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.col-1-5 {
+  flex: 0 0 12.5%;
+  max-width: 12.5%;
+}
+h3 {
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  line-height: var(--line-height-30);
+  font-size: var(--font-size-22);
 }
 .poppins {
   font-family: "Poppins", "sans-serif";

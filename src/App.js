@@ -1,5 +1,7 @@
 import styles from "./App.module.scss";
 import Login from "./components/Login";
+import PostNews from "./components/PostNews";
+import Dashboard from "./components/Dashboard";
 
 import {
   createBrowserRouter,
@@ -8,10 +10,21 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
+    },
+  ]);
+
   return (
-    <div className={styles.App}>
-      <Login />
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

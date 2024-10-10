@@ -2,6 +2,14 @@
   font-size: var(--font-size-16);
   line-height: var(--line-height-24-size);
   font-weight: 600;
+  border-radius: var(--button-border-radius);
+}
+.label {
+  line-height: var(--line-height-24);
+  font-size: var(--font-size-16);
+  font-weight: 500;
+  color: var(--color-placeholder-gray);
+  padding-bottom: 7px;
 }
 .green {
   background-color: var(--color-button-green);
@@ -9,6 +17,9 @@
     background-color: var(--color-button-green-hover);
   }
   color: var(--color-white);
+}
+.white {
+  background-color: var(--color-wihte);
 }
 .gray {
   background-color: var(--color-bg-gray);
