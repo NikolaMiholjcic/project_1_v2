@@ -1,0 +1,32 @@
+@import "src/variables";
+
+.login {
+  background-color: var(--color-white);
+  border-radius: var(--section-border-radius);
+  width: 600px;
+  height: 460px;
+  padding: 60px 128px 60px 112px;
+  .loginContainer {
+    height: 100%;
+    width: 100%;
+    > :nth-child(1) {
+      padding-bottom: 40px;
+    }
+    > :nth-child(2) {
+      padding-bottom: 20px;
+    }
+    > :nth-child(3) {
+      padding-bottom: 27px;
+    }
+    > :nth-child(4) {
+      padding-bottom: 28px;
+    }
+  }
+
+  .span {
+    color: var(--color-blue-dark);
+    font-size: var(--font-size-14);
+    line-height: var(--line-height-21);
+    font-weight: 500;
+  }
+}

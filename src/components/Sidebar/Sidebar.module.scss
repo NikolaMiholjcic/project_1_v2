@@ -1,0 +1,43 @@
+%fontStyle {
+  line-height: var(--line-height-21);
+  font-size: var(--font-size-14);
+  color: var(--color-placeholder-gray);
+  font-weight: 400;
+}
+.sidebar {
+  @extend %fontStyle;
+  width: 240px;
+  height: 100%;
+  background-color: var(--color-white);
+  border-radius: var(--section-border-radius);
+  padding: 20px 21.61px 20px 20px;
+
+  .logoContainer {
+    padding: 10px 0 60px 0;
+  }
+
+  span {
+    @extend %fontStyle;
+    padding-left: 12px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding-bottom: 16px;
+    li {
+      position: relative;
+      @extend %fontStyle;
+      span {
+        position: absolute;
+        left: 0;
+        top: 1px;
+        padding-left: 0;
+        .activeLink {
+          color: var(--color-highlight-blue);
+        }
+      }
+    }
+  }
+}

@@ -11,3 +11,31 @@
   @include card;
   padding: 14px 20px 14px 20px;
 }
+
+@mixin mobile {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin miniTablet {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1201px) {
+    @content;
+  }
+}

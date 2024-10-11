@@ -19,7 +19,7 @@ export default function InputText({
   }
 
   return (
-    <div className="d-flex flex-column container position-relative">
+    <div className="d-flex flex-column container position-relative ">
       {label !== "" && <span className={styles.label}>{label}</span>}
       {type === "text" ? (
         <input

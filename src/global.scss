@@ -9,14 +9,17 @@
   --color-button-red: #df4149;
   --color-button-green-hover: #479c5e;
   --color-highlight-blue: #5561b3;
+  --color-highlight-blue-hover: #4c579c;
   --color-blue-dark: #161f5e;
   --color-table-gray: #3a416f;
   --color-table-blue: #3a416f;
   --color-black: #222631;
   --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
   --font-size-16: 1rem;
   --font-size-20: 1.25rem;
-  --font-size-22: 1.375;
+  --font-size-22: 1.375rem;
+  --font-size-26: 1.625rem;
   --font-size-32: 2rem;
   --line-height-18: 1.125rem;
   --line-height-19: 1.192rem;
@@ -38,11 +41,16 @@
 }
 a {
   text-decoration: none;
+  color: unset;
 }
 p {
   margin-bottom: 0;
 }
-
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -57,6 +65,30 @@ p {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
+.col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.accordion-body {
+  padding: 0;
+  border: unset;
+  padding: 19px 0 0 50px;
+}
+.accordion-item {
+  border: 0;
+  padding-bottom: 10px;
+}
+
+.accordion-button {
+  padding: 0;
+  &:not(.collapsed) {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  &:focus {
+    box-shadow: unset;
+  }
+}
 .col-1-5 {
   flex: 0 0 12.5%;
   max-width: 12.5%;
@@ -66,6 +98,14 @@ h3 {
   font-weight: 700;
   line-height: var(--line-height-30);
   font-size: var(--font-size-22);
+}
+h2 {
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-26);
+  line-height: var(--line-height-35);
+  color: var(--color-black);
+  margin-bottom: 0;
 }
 .poppins {
   font-family: "Poppins", "sans-serif";
