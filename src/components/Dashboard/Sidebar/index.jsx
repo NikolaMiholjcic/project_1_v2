@@ -11,7 +11,7 @@ export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <Logo width={188} height={24} className={styles.logo} />
-      <UncontrolledAccordion defaultOpen={["1", "2"]} stayOpen>
+      <UncontrolledAccordion flush defaultOpen={["1", "2"]} stayOpen>
         <AccordionItem>
           <AccordionHeader targetId="1">Accordion Item 1</AccordionHeader>
           <AccordionBody accordionId="1">

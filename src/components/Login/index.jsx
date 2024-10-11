@@ -8,9 +8,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function Login() {
+  console.log(
+    "add acordaton item border 0, .accordion-button:not(.collapsed) bg color none"
+  );
   const navigate = useNavigate();
   const [isValidInput, setIsValidInput] = useState({
-    password: true,
+    password: false,
     username: true,
   });
   const [form, setForm] = useState({
@@ -82,7 +85,11 @@ export default function Login() {
         </Row>
         <Row>
           <Col className="p-0 col-auto">
-            <ToggleSwitch onChange={onChangeHandler} varName="remember" />
+            <ToggleSwitch
+              onChange={onChangeHandler}
+              varName="remember"
+              color="blue"
+            />
           </Col>
           <Col>
             <span>Remember me</span>
