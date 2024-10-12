@@ -69,3 +69,10 @@
   font-size: var(--font-size-20);
   line-height: var(--line-height-30);
 }
+
+.visibilityToggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

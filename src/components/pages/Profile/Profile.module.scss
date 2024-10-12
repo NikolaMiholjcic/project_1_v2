@@ -8,7 +8,9 @@
     padding-right: 30px;
   }
   .outlet {
-    background-color: lavender;
-    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--border-radius-20);
+    height: auto;
+    padding: 26px 30px 30px 30px;
   }
 }
