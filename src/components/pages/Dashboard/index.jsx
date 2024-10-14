@@ -8,12 +8,12 @@ import { useState } from "react";
 
 export default function Dashboard() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 992px)" });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 1200px)" });
   function sidebarButtonHandler() {
     setIsSideBarOpen((oldState) => !oldState);
   }
   return (
-    <Container className={styles.dashboard + " d-flex"}>
+    <Container className={styles.dashboard + " d-flex "}>
       <div
         className={`${styles.sidebarWrapper} ${
           isSmallScreen ? styles.smallScreenSidebar : ""
@@ -24,7 +24,7 @@ export default function Dashboard() {
 
       <Col>
         <div
-          className={`d-flex flex-column container-fluid flex-grow-1 ${
+          className={`d-flex flex-column container-fluid pe-0 flex-grow-1 ${
             styles.topbarOutletWrapper
           } ${isSmallScreen ? styles.isSmallScreen : ""}`}
         >

@@ -8,6 +8,7 @@ export default function InputText({
   isPassword = false,
   placeholder = "",
   readOnly = false,
+  large = false,
   onChange = () => {},
   label = "",
   invalid = false,
@@ -16,16 +17,20 @@ export default function InputText({
   value = "",
   varName = "",
   toggable = false,
+  isWhite = false,
 }) {
   const [isShowingPassword, setIsShowingPassword] = useState(isPassword);
   if (isShowingPassword) {
     value = "*".repeat(value.length);
   }
-
   return (
     <>
-      {label !== "" && <span className={styles.label}>{label}</span>}
-      <div className="d-flex flex-column container position-relative ">
+      {label !== "" && (
+        <div className={styles.labelContainer}>
+          <span className={styles.label}>{label}</span>
+        </div>
+      )}
+      <div className="d-flex flex-column container-fluid position-relative col">
         {type === "text" ? (
           <input
             placeholder={`${placeholder}`}
@@ -33,7 +38,9 @@ export default function InputText({
             readOnly={readOnly}
             value={value}
             className={`${styles.inputText} ${styles.text} ${
-              invalid ? styles.invalid : ""
+              isWhite ? styles.isWhite : ""
+            } ${invalid ? styles.invalid : ""} ${
+              readOnly ? "cursor-default" : " "
             }`}
             onChange={(event) => {
               onChange(event, varName);
@@ -53,7 +60,9 @@ export default function InputText({
             placeholder={`${placeholder}`}
             readOnly={readOnly}
             value={value}
-            className={`${styles.inputText} ${styles.textArea}`}
+            className={`${styles.inputText} ${styles.textArea} ${
+              large ? styles.large : ""
+            }`}
           />
         )}
         {invalid && (
@@ -73,7 +82,6 @@ export default function InputText({
             className={styles.visibilityToggle}
             onClick={() => {
               setIsShowingPassword((oldState) => !oldState);
-              console.log("some");
             }}
           >
             {!isShowingPassword && <EyeShut />}

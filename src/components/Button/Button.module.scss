@@ -2,7 +2,7 @@
   font-size: var(--font-size-16);
   line-height: var(--line-height-24-size);
   font-weight: 600;
-  border-radius: var(--button-border-radius);
+  border-radius: var(--border-radius-10);
 }
 .label {
   line-height: var(--line-height-24);
@@ -15,14 +15,18 @@
   background-color: var(--color-button-green);
   &:hover {
     background-color: var(--color-button-green-hover);
+    color: var(--color-white);
   }
   color: var(--color-white);
 }
 .white {
-  background-color: var(--color-wihte);
+  background-color: var(--color-white);
 }
 .gray {
   background-color: var(--color-bg-gray);
+  &:hover {
+    background-color: var(--color-bg-gray-hover);
+  }
 }
 .full {
   width: 100%;
@@ -40,4 +44,8 @@
 
 .large {
   height: 46px;
+}
+
+.smallFont {
+  font-size: var(--font-size-12);
 }

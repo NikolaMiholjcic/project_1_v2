@@ -3,13 +3,16 @@
   --color-placeholder-gray: #6d7587;
   --color-upload-gray: #8596ab;
   --color-bg-gray: #f4f5fc;
+  --color-bg-gray-hover: #e5e6ec;
+  --color-gray-light: #eaebf1;
   --color-notification-green: #20c46d;
   --color-notification-red: #ec3535;
   --color-button-green: #4fac68;
   --color-button-red: #df4149;
+  --color-button-red-hover: #ca3b42;
   --color-button-green-hover: #479c5e;
   --color-highlight-blue: #5561b3;
-  --color-highlight-blue-hover: #4c579c;
+  --color-highlight-blue-hover: #434c8a;
   --color-blue-dark: #161f5e;
   --color-table-gray: #3a416f;
   --color-table-blue: #3a416f;
@@ -46,6 +49,7 @@ a {
 p {
   margin-bottom: 0;
 }
+
 ul,
 li {
   padding: 0;
@@ -64,7 +68,10 @@ li {
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
+
 .col {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -93,19 +100,28 @@ li {
   flex: 0 0 12.5%;
   max-width: 12.5%;
 }
+
 h3 {
+  margin: 0;
   font-family: "Open sans", sans-serif;
   font-weight: 700;
   line-height: var(--line-height-30);
   font-size: var(--font-size-22);
+  color: var(--color-black);
 }
 h2 {
+  margin: 0;
   font-family: "Open sans", sans-serif;
   font-weight: 700;
   font-size: var(--font-size-26);
   line-height: var(--line-height-35);
   color: var(--color-black);
-  margin-bottom: 0;
+}
+.padding-right-15 {
+  padding-right: 0;
+  @media only screen and (min-width: 1200px) {
+    padding-right: 15px;
+  }
 }
 .poppins {
   font-family: "Poppins", "sans-serif";
@@ -115,6 +131,9 @@ h2 {
 }
 html {
   font-family: "Poppins", "sans-serif";
+  @media (max-width: 320px) {
+    font-size: 10px;
+  }
   @media (min-width: 320px) {
     font-size: 11.5px;
   }

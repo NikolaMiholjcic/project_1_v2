@@ -23,7 +23,7 @@ export default function Login() {
   });
   function formSubmitHandler(event) {
     event.preventDefault();
-    console.log(isValidInput.password, "+", isValidInput.username);
+
     if (isValidInput.password && isValidInput.username) navigate("/");
   }
   function onFocusHandler(element) {

@@ -3,4 +3,13 @@
   height: 50px;
   display: flex;
   align-items: center;
+  button {
+    border: unset;
+    background-color: unset;
+    &:hover {
+      svg {
+        color: var(--color-highlight-blue-hover);
+      }
+    }
+  }
 }
