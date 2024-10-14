@@ -1,3 +1,4 @@
+@import "../../variables";
 %fontStyle {
   line-height: var(--line-height-21);
   font-size: var(--font-size-14);
@@ -6,14 +7,21 @@
 }
 .sidebar {
   @extend %fontStyle;
-  width: 240px;
+  width: 100%;
   height: 100%;
   background-color: var(--color-white);
   border-radius: var(--section-border-radius);
   padding: 20px 21.61px 20px 20px;
 
   .logoContainer {
-    padding: 10px 0 60px 0;
+    padding: 10px 0 35px 0;
+    display: flex;
+    justify-content: center;
+    svg {
+      @include tablet {
+        width: 140px;
+      }
+    }
   }
 
   span {

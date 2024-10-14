@@ -1,8 +1,8 @@
 import styles from "./ProfileNavigation.module.scss";
-import Person from "../../assets/svgs/Person";
-import Lock from "../../assets/svgs/Lock";
-import Info from "../../assets/svgs/Info";
-import Chain from "../../assets/svgs/Chain";
+import Person from "../../../assets/svgs/Person";
+import Lock from "../../../assets/svgs/Lock";
+import Info from "../../../assets/svgs/Info";
+import Chain from "../../../assets/svgs/Chain";
 import { NavLink } from "react-router-dom";
 export default function ProfileNavigation() {
   return (

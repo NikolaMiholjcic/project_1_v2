@@ -1,7 +1,7 @@
 import styles from "./Profile.module.scss";
 import { Outlet } from "react-router";
 import { Row, Col } from "reactstrap";
-import ProfileNavigation from "../../ProfileNavigation";
+import ProfileNavigation from "../ProfileNavigation";
 export default function Profile() {
   return (
     <div className={`${styles.profile}`}>
