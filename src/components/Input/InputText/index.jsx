@@ -40,7 +40,7 @@ export default function InputText({
             className={`${styles.inputText} ${styles.text} ${
               isWhite ? styles.isWhite : ""
             } ${invalid ? styles.invalid : ""} ${
-              readOnly ? "cursor-default" : " "
+              readOnly ? styles.readOnly : " "
             }`}
             onChange={(event) => {
               onChange(event, varName);
