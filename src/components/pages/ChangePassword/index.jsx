@@ -21,8 +21,11 @@ export default function ChangePassword() {
       [data]: event.target.value,
     }));
   }
+  function formSubmitHandler(event) {
+    event.preventDefault();
+  }
   return (
-    <form>
+    <form onSubmit={formSubmitHandler}>
       <div className={`${styles.changePassword}`}>
         <h3>Change Password</h3>
         <div className="row">

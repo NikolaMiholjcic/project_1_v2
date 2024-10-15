@@ -7,6 +7,7 @@ export default function Button({
   children,
   label = "",
   fontSize = "normal",
+  isPetite = false,
   onClick = () => {},
 }) {
   return (
@@ -14,8 +15,10 @@ export default function Button({
       {label !== "" && <span className={styles.label}>{label}</span>}
       <button
         className={`btn ${styles.button} ${styles[color]} ${styles[width]} ${
-          styles[height]
-        } ${fontSize === "small" ? styles.smallFont : ""} bold`}
+          isPetite ? styles.petite : ""
+        } ${styles[height]} ${
+          fontSize === "small" ? styles.smallFont : ""
+        } bold`}
         onClick={onClick}
       >
         {children}

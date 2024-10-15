@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useState } from "react";
 import axios from "axios";
+import axiosInstance from "./axiosInstance";
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState({
     id: "saramiler18823",
-    picture: "%PUBLIC_URL%/profile.png",
+    picture: "/profile.png",
     name: "Sara Miler",
     username: "johndoe",
     password: "johndoe123",
@@ -27,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post("/api/auth/login", {
+      const response = await axiosInstance.post("/api/auth/login", {
         username,
         password,
       });
@@ -35,7 +36,7 @@ export const AuthProvider = ({ children }) => {
         username,
         token: response.data.token,
       });
-      axios.defaults.headers.common[
+      axiosInstance.defaults.headers.common[
         "Authorization"
       ] = `Bearer ${response.data.token}`;
     } catch (error) {
@@ -50,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   };
   const logout = () => {
     setUser(null);
-    delete axios.defaults.headers.common["Authorization"];
+    delete axiosInstance.defaults.headers.common["Authorization"];
   };
 
   return (

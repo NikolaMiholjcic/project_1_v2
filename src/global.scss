@@ -85,7 +85,12 @@ li {
   border: 0;
   padding-bottom: 10px;
 }
-
+.w-15 {
+  width: 15%;
+  @media only screen and (min-width: 576px) {
+    width: 100%;
+  }
+}
 .accordion-button {
   padding: 0;
   &:not(.collapsed) {

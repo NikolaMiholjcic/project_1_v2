@@ -28,7 +28,7 @@ export default function PostNews() {
         </div>
       </div>
 
-      <div className="row h-100">
+      <div className="row h-100 gap-5 gap-md-0">
         <div
           className={`${styles.section} ${styles.sectionOne} col-12 col-md-8`}
         >
@@ -75,7 +75,7 @@ export default function PostNews() {
           </div>
         </div>
 
-        <div className={`${styles.sectionTwoWrapper} col-4 pe-0`}>
+        <div className={`${styles.sectionTwoWrapper} col-12 col-md-4 pe-0`}>
           <div className={`${styles.section} ${styles.sectionTwo} h-100`}>
             <div className="row">
               <div className="col-12 col">
